@@ -1,14 +1,15 @@
 module.exports = function () {
   process.stdin.on("data", (data) => {
     let cmd = data.toString().trim();
+    const commandArr = cmd.split(" ");
 
-    if (cmd === "ls") {
+    if (commandArr[0] === "cat") {
       const fs = require("fs");
-      fs.readdir("./", "utf8", (err, files) => {
+      fs.readFile(commandArr[1], "utf8", (err, files) => {
         if (err) {
           throw err;
         } else {
-          process.stdout.write(files.join("\n"));
+          process.stdout.write(files);
           process.stdout.write("\nprompt > ");
         }
       });
