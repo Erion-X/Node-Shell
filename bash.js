@@ -2,9 +2,11 @@
 const pwd = require("./pwd");
 const ls = require("./ls");
 const cat = require("./cat");
+const curl = require("./curl");
 pwd();
 ls();
 cat();
+curl();
 
 process.stdout.write("prompt > ");
 
