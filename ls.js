@@ -2,13 +2,12 @@ module.exports = function() {
   process.stdin.on('data', (data) => {
 
     let cmd = data.toString().trim()
-    if (cmd === 'pwd') {
+    if () {
 
 
-    process.stdout.write(process.cwd());
+    process.stdout.write();
   }
   process.stdout.write('\nprompt > ');
   });
 
 }
-
